@@ -1,0 +1,9 @@
+# never commit secrets
+assets/client_secrets.json
+assets/*client_secret*.json
+.env
+.env.*
+# Local temp/cache
+.tmp_sessions/
+# (if you also have a .tmp folder, add this too)
+.tmp/

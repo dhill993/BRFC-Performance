@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "bristol rovers benchmark app"
+version = "1"
+description = ""
+authors = ["Hamdanovic98 <marwanehamdani@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+python-dotenv = "^1.1.1"
+streamlit = "^1.48.0"
+pandas = "^2.3.1"
+numpy = "^2.3.2"
+requests = "^2.32.4"
+matplotlib = "^3.10.5"
+seaborn = "^0.13.2"
+plottable = "^0.1.5"
+mplsoccer = "^1.5.1"
+google-auth = "^2.40.3"
+google-auth-oauthlib = "^1.2.2"
+google-auth-httplib2 = "^0.2.0"
+google-api-python-client = "^2.181.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
