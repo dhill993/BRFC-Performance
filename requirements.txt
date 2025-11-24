@@ -1,13 +1,16 @@
 python-dotenv==1.1.1
 streamlit==1.48.0
-pandas==2.3.1
+pandas==2.2.2
 numpy==1.26.4
 requests==2.32.4
-matplotlib==3.10.5
+matplotlib==3.8.4
 seaborn==0.13.2
 plottable==0.1.5
 mplsoccer==1.5.1
-google-auth
-google-auth-oauthlib
-google-auth-httplib2
-google-api-python-client
+beautifulsoup4==4.12.3
+
+# Google API libs pinned for stability
+google-auth==2.34.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.1.1
+google-api-python-client==2.149.0
