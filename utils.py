@@ -1,18 +1,23 @@
-python-dotenv==1.0.1
+# utils.py
+import os
+import streamlit as st
+from dotenv import load_dotenv
 
-streamlit==1.36.0
-
-numpy==1.26.4
-pandas==2.1.4
-matplotlib==3.8.4
-scipy==1.11.4
-seaborn==0.13.2
-mplsoccer==1.2.4
-
-beautifulsoup4==4.12.3
-requests==2.32.3
+load_dotenv()
 
 def get_statsbomb_creds():
-    from google.oauth2 import service_account
-    from googleapiclient.discovery import build
-    
+    """
+    Return (username, password) for StatsBomb.
+    Priority:
+    1. Environment variables
+    2. Streamlit secrets
+    """
+    user = os.getenv("SB_USERNAME")
+    pwd  = os.getenv("SB_PASSWORD")
+
+    if not user or not pwd:
+        sb = st.secrets.get("statsbomb", {})
+        user = user or sb.get("user")
+        pwd  = pwd  or sb.get("password")
+
+    return user, pwd
