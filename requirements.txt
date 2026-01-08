@@ -12,5 +12,7 @@ mplsoccer==1.2.4
 beautifulsoup4==4.12.3
 requests==2.32.3
 
-google-auth==2.34.0
-google-api-python-client==2.126.0
+def get_statsbomb_creds():
+    from google.oauth2 import service_account
+    from googleapiclient.discovery import build
+    
